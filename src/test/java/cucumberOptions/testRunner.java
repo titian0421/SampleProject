@@ -5,8 +5,7 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
 		features = {"src/test/java/features/"},
-		glue = "stepDefinitions",
-		tags = "@Logout"
+		glue = "stepDefinitions"
 		)
 
 public class testRunner extends AbstractTestNGCucumberTests {

@@ -4,7 +4,7 @@
 @Logout
 Feature: Logout from the account
 
-	Scenario: 
+	Scenario: Log out from the welcome menu options
 		Given I am in the Dashboard page and logged into my account
 		When I go to the welcome options
 		And I click the Logout option
