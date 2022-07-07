@@ -1,4 +1,4 @@
-#Author: Cristian Ramiro Jimenez Molina cj00856208@techmahindra.com
+#Author: Cristian Ramiro Jimenez Molina
 #Project: Sample project with the page: https://opensource-demo.orangehrmlive.com/
 
 @Login
@@ -39,4 +39,4 @@ Feature: Login into the web page
     | "Test1" | "Test1" |
     | "Test2" | "Test2" |
     | "Test3" | "Test3" |
-    | "Test4" | "Test4" |
+    | "Test4" | "Test4" | 
