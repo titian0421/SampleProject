@@ -7,7 +7,7 @@ import io.cucumber.testng.CucumberOptions;
 		features={"src/test/java/features/"},
 		glue="stepDefinitions",
 		monochrome=true,
-		tags="@DirectorySearch"
+		tags="@Login"
 		)
 
 public class testNGTestRunner extends AbstractTestNGCucumberTests {

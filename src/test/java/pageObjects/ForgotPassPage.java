@@ -14,15 +14,12 @@ public class ForgotPassPage extends TestBase {
 	By resetBtn = By.xpath("//input[contains(@id, 'Search')]");
 	By message = By.xpath("//div[contains(@class, 'warning')]");
 	
-//	Defining required variables
-	public String loginUrl = "https://opensource-demo.orangehrmlive.com/index.php/auth/login";
-	
 	public ForgotPassPage() throws IOException {
 		super();
 	}
 	
 	public void loadLoginPage() {
-		get(loginUrl);
+		get(getLoginLink());
 	}
 	
 	public void clickForgotPass() {

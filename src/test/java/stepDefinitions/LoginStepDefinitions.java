@@ -11,7 +11,6 @@ import pageObjects.LoginPage;
 
 public class LoginStepDefinitions {
 
-	public String dashboardPage = "https://opensource-demo.orangehrmlive.com/index.php/dashboard"; //The right url after correct login
 	public LoginPage loginPage;
 	
 	@Before("@Login")
@@ -50,7 +49,7 @@ public class LoginStepDefinitions {
 	public void i_am_in_the_dashboard_page() {
 //		Getting the actual url in order to compare and validate the right login process
 		String actualPage = loginPage.getCurrentUrl();
-	    Assert.assertEquals(actualPage, dashboardPage);
+	    Assert.assertEquals(actualPage, loginPage.getDashboardLink());
 	}
 	
 	@Then("I receive advice about issue with credentials")

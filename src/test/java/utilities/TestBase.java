@@ -16,7 +16,6 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class TestBase {
 
 	public WebDriver driver;
-	public String browser;
 	public Properties prop;
 	
 	public TestBase() throws IOException {
@@ -26,15 +25,13 @@ public class TestBase {
 		prop.load(fis);
 		
 //		Validating the selected browser for the test
-		browser = prop.getProperty("browser");
-		
-		if(browser.equalsIgnoreCase("chrome")) {
+		if(prop.getProperty("browser").equalsIgnoreCase("chrome")) {
 			chromeDriverConnection();
 		}
-		if(browser.equalsIgnoreCase("mozilla") | browser.equalsIgnoreCase("firefox")) {
+		if(prop.getProperty("browser").equalsIgnoreCase("mozilla") | prop.getProperty("browser").equalsIgnoreCase("firefox")) {
 			mozillaDriverConnection();
 		}
-		if(browser.equalsIgnoreCase("edge")) {
+		if(prop.getProperty("browser").equalsIgnoreCase("edge")) {
 			edgeDriverConnection();
 		}
 	}
@@ -52,6 +49,11 @@ public class TestBase {
 //	Getting the login url directly from the properties file
 	public String getLoginLink() {
 		return prop.getProperty("loginurl");
+	}
+	
+//	Getting the login url directly from the properties file
+	public String getDashboardLink() {
+		return prop.getProperty("dashboardurl");
 	}
 	
 //	Creating connection with ChromeDriver
